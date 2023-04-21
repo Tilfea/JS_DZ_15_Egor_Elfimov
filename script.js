@@ -1,3 +1,4 @@
+// Калькулятор
 let Calc = function () {
   this.get = function () {
     this.a = +prompt("Введите число а");
@@ -37,4 +38,22 @@ let Calc = function () {
 };
 
 let calc = new Calc();
-calc.get();
+
+
+
+// Калькулятор расхода топлива
+let CarCalc = function(){
+    this.get = function(){
+      this.a = prompt(`Средний расход топлива, литров/100 км`)
+      this.b = prompt(`Пройденное расстояние, км`)
+      this.cost = prompt(`Стоимость топлива, руб./литр`)
+
+      this.total()
+    }
+    this.total = function(){
+      alert(`Для преодоления расстояния в ${this.b}км потребуется ${this.b/100*this.a} литров топлива, его стоимость будет составлять ${this.b/100*this.a*this.cost}руб.`)
+    }
+
+}
+
+let car = new CarCalc();
